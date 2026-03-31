@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Radio Button</title>
+
+<script>
+function changeText(type)
+{
+    var text = document.getElementById("txt").value;
+
+    if(type == "upper")
+    {
+        document.getElementById("result").innerHTML = text.toUpperCase();
+    }
+    else if(type == "lower")
+    {
+        document.getElementById("result").innerHTML = text.toLowerCase();
+    }
+    else
+    {
+        document.getElementById("result").innerHTML = text;
+    }
+}
+</script>
+
+</head>
+
+<body>
+
+Enter Text :
+<input type="text" id="txt">
+
+<br><br>
+
+<input type="radio" name="r1" onclick="changeText('upper')"> UpperCase
+<input type="radio" name="r1" onclick="changeText('lower')"> LowerCase
+<input type="radio" name="r1" onclick="changeText('same')"> As It Is
+
+<br><br>
+
+<p id="result"></p>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Array Operations</title>
+
+<script>
+
+var arr = ["nice","cola","mayuri","high"];
+
+function checkValue()
+{
+    var val = document.getElementById("val").value;
+
+    if(arr.includes(val))
+        document.getElementById("msg").innerHTML="Value Found";
+    else
+        document.getElementById("msg").innerHTML="Value Not Found";
+}
+
+function addEnd()
+{
+    var val = document.getElementById("val").value;
+    arr.push(val);
+    document.getElementById("final").innerHTML="Array : "+arr;
+}
+
+function insertIndex()
+{
+    var val = document.getElementById("val").value;
+    var idx = document.getElementById("index").value;
+
+    arr.splice(idx,0,val);
+
+    document.getElementById("final").innerHTML="Array : "+arr;
+}
+
+function removeIndex()
+{
+    var idx = document.getElementById("rindex").value;
+
+    arr.splice(idx,1);
+
+    document.getElementById("final").innerHTML="Array : "+arr;
+}
+
+</script>
+</head>
+
+<body>
+
+Enter Value:
+<input type="text" id="val">
+
+<button onclick="checkValue()">Check</button>
+
+<p id="msg"></p>
+
+<br>
+
+<button onclick="addEnd()">Add To End</button>
+
+<br><br>
+
+Insert Index:
+<input type="text" id="index">
+
+<button onclick="insertIndex()">Insert</button>
+
+<br><br>
+
+Remove Index:
+<input type="text" id="rindex">
+
+<button onclick="removeIndex()">Remove</button>
+
+<p id="final"></p>
+
+</body>
+</html>

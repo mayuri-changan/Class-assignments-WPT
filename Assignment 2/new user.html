@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>New User Registration</title>
+
+<script>
+function showData()
+{
+    var fname = document.getElementById("fname").value;
+    var lname = document.getElementById("lname").value;
+    var uname = document.getElementById("uname").value;
+    var email = document.getElementById("email").value;
+
+    var gender = document.querySelector('input[name="gender"]:checked').value;
+
+    var lang = "";
+    var languages = document.getElementsByName("lang");
+    for(var i=0;i<languages.length;i++)
+    {
+        if(languages[i].checked)
+        {
+            lang += languages[i].value + " ";
+        }
+    }
+
+    var table =
+    "<table border='1'>" 
+    "<tr><th>First Name</th><td>"+fname+"</td></tr>" 
+    "<tr><th>Last Name</th><td>"+lname+"</td></tr>" 
+    "<tr><th>User Name</th><td>"+uname+"</td></tr>" 
+    "<tr><th>Gender</th><td>"+gender+"</td></tr>" 
+    "<tr><th>Languages</th><td>"+lang+"</td></tr>" 
+    "<tr><th>Email</th><td>"+email+"</td></tr>" 
+    "</table>";
+
+    document.getElementById("result").innerHTML = table;
+
+    return false;
+}
+</script>
+
+</head>
+
+<body>
+
+<h2>New User Registration</h2>
+
+<form onsubmit="return showData()">
+
+<fieldset>
+<legend>User Information</legend>
+
+First Name:
+<input type="text" id="fname" required><br><br>
+
+Last Name:
+<input type="text" id="lname" required><br><br>
+
+User Name:
+<input type="text" id="uname" required><br><br>
+
+Gender:
+<input type="radio" name="gender" value="Male" required>Male
+<input type="radio" name="gender" value="Female">Female
+<br><br>
+
+Known Languages:
+<input type="checkbox" name="lang" value="English">English
+<input type="checkbox" name="lang" value="Marathi">Marathi
+<input type="checkbox" name="lang" value="Hindi">Hindi
+<br><br>
+
+Email:
+<input type="email" id="email" required>
+<br><br>
+
+Password:
+<input type="password" required>
+<br><br>
+
+Re-enter Password:
+<input type="password" required>
+<br><br>
+
+<input type="submit" value="Register">
+
+</fieldset>
+
+</form>
+
+<br>
+
+<h3>Registered Information</h3>
+<div id="result"></div>
+
+</body>
+</html>

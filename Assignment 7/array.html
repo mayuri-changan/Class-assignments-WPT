@@ -1,0 +1,42 @@
+<!-- take array of 10 elements 
+
+display array as it is 
+
+and use predefined methods of array and display 
+
+only even numbers , odd numbers and display whole array 
+in sorted way  -->
+
+<html>
+<body>
+
+<script>
+
+
+var arr = [12, 7, 5, 20, 9, 14, 3, 18, 11, 6];
+
+
+document.write("Original Array: " + arr + "<br><br>");
+
+
+var even = arr.filter(function(num){
+    return num % 2 == 0;
+});
+document.write("Even Numbers: " + even + "<br><br>");
+
+
+var odd = arr.filter(function(num){
+    return num % 2 != 0;
+});
+document.write("Odd Numbers: " + odd + "<br><br>");
+
+
+var sorted = arr.slice().sort(function(a,b){
+    return a-b;
+});
+document.write("Sorted Array: " + sorted);
+
+</script>
+
+</body>
+</html>

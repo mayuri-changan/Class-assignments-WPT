@@ -1,0 +1,36 @@
+<!-- declare 1 variable which contains data for 
+    Object format convert that data in json format
+    and again in Object Format  -->
+
+
+  
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+
+// Step 1: Object Format
+let student = {
+    id: 101,
+    name: "Mayuri",
+    course: "WPT"
+};
+
+// Step 2: Convert Object to JSON
+let jsonData = JSON.stringify(student);
+
+// Step 3: Convert JSON back to Object
+let objData = JSON.parse(jsonData);
+
+// Display Data
+document.getElementById("demo").innerHTML =
+"Object Data: " + student.name + "<br><br>" +
+"JSON Data: " + jsonData + "<br><br>" +
+"Converted Back Object Name: " + objData.name;
+
+</script>
+
+</body>
+</html>

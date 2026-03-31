@@ -1,0 +1,30 @@
+<!-- create application for $().load()
+display content of another html page in current page  -->
+
+<html>
+<head>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+    $("#btn").click(function(){
+        $("#result").load("data.html");
+    });
+
+});
+</script>
+
+</head>
+
+<body>
+
+<h2>Main Page</h2>
+
+<button id="btn">Load Content</button>
+
+<div id="result"></div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Array Example</title>
+
+<script>
+var arr = [];
+
+function addData()
+{
+    var value = document.getElementById("txt").value;
+    arr.push(value);        // add value in array
+    document.getElementById("txt").value = "";
+}
+
+function displayData()
+{
+    var result = "<ul>";
+
+    for(var i=0; i<arr.length; i++)
+    {
+        result += "<li>" + arr[i] + "</li>";
+    }
+
+    result += "</ul>";
+
+    document.getElementById("output").innerHTML = result;
+}
+</script>
+
+</head>
+
+<body>
+
+Enter Value:
+<input type="text" id="txt">
+
+<br><br>
+
+<button onclick="addData()">Add</button>
+<button onclick="displayData()">Display</button>
+
+<p id="output"></p>
+
+</body>
+</html>

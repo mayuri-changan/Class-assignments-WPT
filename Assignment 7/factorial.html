@@ -1,0 +1,38 @@
+<!-- Using Jquery accept a number from the user in a textfield - on change show
+the factorial of that number in a <p> tag -->
+
+    <html>
+        <head>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+        <script>
+        $(document).ready(function(){
+        
+            $("#num").change(function(){
+        
+                var n = $("#num").val();
+                var fact = 1;
+        
+                for(var i=1;i<=n;i++)
+                {
+                    fact = fact * i;
+                }
+        
+                $("#result").text("Factorial = " + fact);
+        
+            });
+        
+        });
+        </script>
+        
+        </head>
+        
+        <body>
+        
+        Enter Number: <input type="text" id="num">
+        
+        <p id="result"></p>
+        
+        </body>
+        </html>

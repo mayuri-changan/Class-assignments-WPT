@@ -1,0 +1,59 @@
+<html>
+<body>
+
+<h3>Add Todo</h3>
+
+User ID:
+<input type="text" id="uid"><br><br>
+
+Title:
+<input type="text" id="title"><br><br>
+
+Completed:
+<input type="text" id="status"><br><br>
+
+<button onclick="sendData()">POST DATA</button>
+
+<p id="result"></p>
+
+<script>
+
+function sendData()
+{
+    var uid = document.getElementById("uid").value;
+    var title = document.getElementById("title").value;
+    var status = document.getElementById("status").value;
+
+    var data = {
+        userId: uid,
+        title: title,
+        completed: status
+    };
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("POST","https://jsonplaceholder.typicode.com/todos",true);
+
+    xhr.setRequestHeader("Content-Type","application/json");
+
+    xhr.onreadystatechange = function()
+    {
+        if(xhr.readyState == 4 && xhr.status == 201)
+        {
+            var response = JSON.parse(xhr.responseText);
+
+            document.getElementById("result").innerHTML =
+            "ID: " + response.id + "<br>" +
+            "UserID: " + response.userId + "<br>" +
+            "Title: " + response.title + "<br>" +
+            "Completed: " + response.completed;
+        }
+    };
+
+    xhr.send(JSON.stringify(data));
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!-- take div on your html with width 50 and height 50 px 
+   on start button click  animate that div to left to right and change height and width -->
+   (last one)
+   add stop button on click of that stop the animation -->
+
+   <html>
+<head>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+    // Start animation
+    $("#start").click(function(){
+        $("#box").animate({
+            left: '300px',
+            width: '120px',
+            height: '120px'
+        },3000);
+    });
+
+    // Stop animation
+    $("#stop").click(function(){
+        $("#box").stop();
+    });
+
+});
+</script>
+
+<style>
+#box{
+    width:50px;
+    height:50px;
+    background-color:blue;
+    position:relative;
+}
+</style>
+
+</head>
+
+<body>
+
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+
+<br><br>
+
+<div id="box"></div>
+
+</body>
+</html>

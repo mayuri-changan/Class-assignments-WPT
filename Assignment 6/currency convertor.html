@@ -1,0 +1,88 @@
+
+<html>
+<head>
+<title>Currency Converter</title>
+
+<style>
+.container{   
+    border:2px solid black;
+    padding:20px;
+    width:300px;
+}
+
+p{
+    
+
+    background-color: white;
+    color: blue;
+    border:2px solid red;
+    padding:10px;
+    font-weight:bold;
+    
+}
+</style>
+
+<script>
+function convert()
+{
+    var amt = document.getElementById("amt").value;
+    var from = document.getElementById("from").value;
+    var to = document.getElementById("to").value;
+    var result;
+
+    if(from=="rupee")
+        result = amt;
+    else if(from=="dollar")
+        result = amt * 80;
+    else if(from=="euro")
+        result = amt * 90;
+
+    if(to=="rupee")
+        result = result;
+    else if(to=="dollar")
+        result = result / 80;
+    else if(to=="euro")
+        result = result / 90;
+
+    document.getElementById("out").innerHTML="Converted Amount : "+result;
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+Amount:
+<input type="text" id="amt">
+
+<br><br>
+
+From:
+<select id="from">
+<option value="rupee">Rupee</option>
+<option value="dollar">Dollar</option>
+<option value="euro">Euro</option>
+</select>
+
+<br><br>
+
+To:
+<select id="to">
+<option value="rupee">Rupee</option>
+<option value="dollar">Dollar</option>
+<option value="euro">Euro</option>
+</select>
+
+<br><br>
+
+<button onclick="convert()">Convert</button>
+
+
+<p id="out"></p>
+
+</div>
+
+</body>
+</html>

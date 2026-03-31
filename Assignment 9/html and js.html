@@ -1,0 +1,42 @@
+<!-- using html & javascript 
+
+hint Math class and String methods 
+
+1) accept length from user and generate random password on javascript and display  -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Random Password Generator</h3>
+
+Enter Password Length:
+<input type="number" id="len">
+
+<button onclick="generatePassword()">Generate Password</button>
+
+<p id="result"></p>
+
+<script>
+
+function generatePassword()
+{
+    var length = document.getElementById("len").value;
+
+    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%";
+
+    var password = "";
+
+    for(var i=0; i<length; i++)
+    {
+        var randomIndex = Math.floor(Math.random() * chars.length);
+        password += chars.charAt(randomIndex);
+    }
+
+    document.getElementById("result").innerHTML = "Password: " + password;
+}
+
+</script>
+
+</body>
+</html>

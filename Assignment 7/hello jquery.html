@@ -1,0 +1,35 @@
+<!-- Using Jquery write an html that has a button-OK . When button is clicked
+display hello in a <p> tag
+Display italics hello in another <p> tag
+Distplay underline hello in third <p> tag -->
+<html>
+<head>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+    $("#btn").click(function(){
+
+        $("#p1").text("Hello");
+        $("#p2").html("<i>Hello</i>");
+        $("#p3").html("<u>Hello</u>");
+
+    });
+
+});
+</script>
+
+</head>
+
+<body>
+
+<button id="btn">OK</button>
+
+<p id="p1"></p>
+<p id="p2"></p>
+<p id="p3"></p>
+
+</body>
+</html>

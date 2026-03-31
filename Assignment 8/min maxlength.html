@@ -1,0 +1,39 @@
+<!-- create HTML page with 1 textfield and button 
+     add predefined validators on textfield 
+     required , minlength , maxlength 
+     on button click display error message in front of textfield  -->
+     <html>
+        <body>
+        
+        <form id="myForm">
+        
+        Enter Name:
+        <input type="text" id="name"
+               required
+               minlength="3"
+               maxlength="10">
+        
+        <button type="submit">Submit</button>
+        
+        <span id="error"></span>
+        
+        </form>
+        
+        <script>
+        
+        document.getElementById("myForm").addEventListener("submit", function(e){
+        
+            var input = document.getElementById("name");
+        
+            if(!input.checkValidity())
+            {
+                e.preventDefault(); 
+                document.getElementById("error").innerHTML = input.validationMessage;
+            }
+        
+        });
+        
+        </script>
+        
+        </body>
+        </html>

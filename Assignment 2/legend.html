@@ -1,0 +1,46 @@
+<!-- add fieldset and legend tags 
+add html5 validators for fields  -->
+
+<html>
+<head>
+<title>New User Registration</title>
+</head>
+
+<body>
+
+<h2>New User Registration</h2>
+
+<form>
+
+<fieldset>
+<legend>User Information</legend>
+
+First Name:
+<input type="text" name="firstname" required pattern="[A-Za-z]{2,}">
+<br><br>
+
+Last Name:
+<input type="text" name="lastname" required pattern="[A-Za-z]{2,}">
+<br><br>
+
+User Name:
+<input type="text" name="username" required minlength="4">
+<br><br>
+
+Gender:
+<input type="radio" name="gender" value="Male" required> Male
+<input type="radio" name="gender" value="Female"> Female
+<br><br>
+
+Known Languages:
+<input type="checkbox" name="lang" value="English"> English
+
+</fieldset>
+
+<br>
+<input type="submit" value="Register">
+
+</form>
+
+</body>
+</html>
