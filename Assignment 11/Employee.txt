@@ -1,0 +1,3 @@
+Employee: Mayuri Changan, Email: mayuri@example.com, Designation: Developer, Salary: 50000
+Employee: Rahul Patil, Email: rahul@example.com, Designation: Manager, Salary: 75000
+Employee: Anita Shinde, Email: anita@example.com, Designation: Tester, Salary: 40000
