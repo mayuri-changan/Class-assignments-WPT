@@ -1,0 +1,7 @@
+[
+  { "prodid": 1, "ProductName": "Laird", "price": 2000 },
+  { "prodid": 2, "ProductName": "Pen", "price": 20 },
+  { "prodid": 3, "ProductName": "Book", "price": 150 },
+  { "prodid": 4, "ProductName": "Laptop", "price": 50000 },
+  { "prodid": 5, "ProductName": "Mobile", "price": 20000 }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "ID": 1,
+    "Title": "Backpack",
+    "Price": 109,
+    "Category": "men's clothing",
+    "Image": "[img]"
+  },
+  {
+    "ID": 2,
+    "Title": "T-Shirt",
+    "Price": 22,
+    "Category": "men's clothing",
+    "Image": "[img]"
+  },
+  {
+    "ID": 3,
+    "Title": "Jacket",
+    "Price": 55,
+    "Category": "men's clothing",
+    "Image": "[img]"
+  }
+]
